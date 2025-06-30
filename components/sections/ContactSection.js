@@ -1,78 +1,49 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import styles from '../../styles/Home.module.css';
 
 export default function ContactSection() {
-  const [profile, setProfile] = useState('');
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!profile || !name.trim() || !email.trim()) {
-      setError('Por favor, selecciona tu perfil y completa nombre y email.');
-      return;
-    }
-    setError('');
-    const url =
-      profile === 'profesor'
-        ? 'https://calendly.com/sophia-demo/profesor'
-        : 'https://calendly.com/sophia-demo/institucion';
-    window.open(url, '_blank');
-  };
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <section id="contact" className={`${styles.section} ${styles.contact}`}>
       <h1>Contacta</h1>
       <p className={styles.contactDescription}>
-        Solicita una demo personalizada y resuelve todas tus dudas.
+        Solicita una demo personalizada y agéndala directamente con nuestro equipo.
       </p>
-      <form onSubmit={handleSubmit} className={styles.contactForm}>
-        <div className={styles.radioGroup}>
-          <label>
-            <input
-              type="radio"
-              name="perfil"
-              value="profesor"
-              checked={profile === 'profesor'}
-              onChange={() => setProfile('profesor')}
-            />{' '}
-            Profesor
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="perfil"
-              value="institucion"
-              checked={profile === 'institucion'}
-              onChange={() => setProfile('institucion')}
-            />{' '}
-            Institución
-          </label>
+
+      <div className={styles.contactContainer}>
+        {/* Widget Calendly */}
+        <div className={styles.calendlyContainer}>
+          <div
+            className="calendly-inline-widget"
+            data-url="https://calendly.com/bale2manos/30min?background_color=f3ecda&text_color=000000&primary_color=1d6391"
+            style={{ minWidth: '100%', height: '700px' }}
+          ></div>
         </div>
-        <input
-          type="text"
-          placeholder="Nombre"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <textarea
-          placeholder="Cuéntanos tus dudas..."
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        {error && <p className={styles.error}>{error}</p>}
-        <button type="submit" className={styles.submitButton}>
-          Agendar reunión
-        </button>
-      </form>
+
+        {/* Texto lateral */}
+        <div className={styles.textContainer}>
+          <h2>¿Por qué agendar una demo?</h2>
+          <p>
+            SophIA fusiona tecnología e innovación educativa para ofrecerte una solución adaptada
+            a tu contexto docente o institucional.
+          </p>
+          <ul>
+            <li>✔ Análisis personalizado según tu perfil</li>
+            <li>✔ Demostración práctica con ejemplos reales</li>
+            <li>✔ Resolución de dudas en directo</li>
+            <li>✔ Sin compromiso</li>
+          </ul>
+          <p>
+            Tanto si eres docente como si representas a una institución, estaremos encantados de mostrarte cómo SophIA puede marcar la diferencia en tu día a día.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }

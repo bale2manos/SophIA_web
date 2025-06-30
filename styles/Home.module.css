@@ -239,50 +239,60 @@
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
-
-.contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  max-width: 500px;
+.calendly-inline-widget {
+  margin: 0 auto;
 }
 
-.radioGroup {
+.contactContainer {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.contactForm input,
-.contactForm textarea {
-  padding: 0.5rem;
-  border: 1px solid #1d6391;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 1rem;
+.calendlyContainer,
+.textContainer {
+  flex: 1;
+  min-width: 320px;
+  max-width: 600px;
 }
 
-.contactForm textarea {
-  resize: vertical;
-  min-height: 100px;
+.textContainer {
+  background: #fffaf2;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.05rem;
 }
 
-.submitButton {
-  background-color: #1d6391;
-  color: #ffffff;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
+.textContainer h2 {
+  color: #1d6391;
+  margin-bottom: 1rem;
 }
 
-.submitButton:hover {
-  background-color: #130000;
+.textContainer ul {
+  padding-left: 1.2rem;
+  margin: 1rem 0;
 }
 
-.error {
-  color: red;
-  font-size: 0.9rem;
+.textContainer li {
+  margin-bottom: 0.5rem;
+}
+
+.calendlyContainer {
+  flex: 1;
+  min-width: 320px;
+  max-width: 600px;
+  overflow: hidden; /* Oculta scrollbars */
+}
+
+.calendlyContainer iframe {
+  scrollbar-width: none;  /* Firefox */
+}
+
+.calendlyContainer iframe::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
