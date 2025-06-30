@@ -223,3 +223,66 @@
   padding-left: 1rem;
   margin-top: 1.5rem;
 }
+
+/* Contact Section */
+.contact {
+  font-size: 1rem;
+  padding: 4rem 1rem;
+}
+
+.contact h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contactDescription {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 0.5rem;
+  border: 1px solid #1d6391;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contactForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submitButton {
+  background-color: #1d6391;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #130000;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
