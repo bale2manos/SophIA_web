@@ -24,7 +24,6 @@ const sponsors = [
 ];
 
 export default function TrustSection() {
-
   return (
     <section id="trust" className={styles.trustSection}>
       <h1>Confían en nosotros</h1>
@@ -46,6 +45,5 @@ export default function TrustSection() {
         ))}
       </div>
     </section>
-
   );
 }
