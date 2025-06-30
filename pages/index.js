@@ -15,7 +15,7 @@ export default function Home() {
       <div className={styles.container}>
         <nav className={styles.navbar}>
           <a href="#home" className={styles.logo}>
-            <img src="/logo.svg" alt="SophIA logo" className={styles.logoImage} />
+            <img src="/logos/sophia.png" alt="SophIA logo" className={styles.logoImage} />
             <span>SophIA</span>
           </a>
           <div className={styles.links}>

@@ -30,7 +30,7 @@
   font-weight: 400;
   font-size: 1.5rem;
   text-decoration: none;
-  color: #1d6391;
+  color: #000000;
 }
 
 .logoImage {
@@ -41,7 +41,7 @@
 .links a {
   margin-left: 24px;
   text-decoration: none;
-  color: #1d6391;
+  color: #000000;
   font-weight: 500;
   transition: color 0.2s ease-in-out;
 }
