@@ -3,7 +3,7 @@
   height: 100vh;
   overflow-y: auto;
   font-family: 'Inter', sans-serif;
-  color: #1f2937;
+  color: #130000;
 }
 
 .navbar {
@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   height: 64px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(243, 236, 218, 0.8);
   backdrop-filter: blur(8px);
   display: flex;
   justify-content: space-between;
@@ -26,19 +26,19 @@
   font-weight: 600;
   font-size: 1.25rem;
   text-decoration: none;
-  color: #4f46e5;
+  color: #1d6391;
 }
 
 .links a {
   margin-left: 24px;
   text-decoration: none;
-  color: #1f2937;
+  color: #1d6391;
   font-weight: 500;
   transition: color 0.2s ease-in-out;
 }
 
 .links a:hover {
-  color: #4f46e5;
+  color: #130000;
 }
 
 .section {
@@ -52,18 +52,18 @@
 }
 
 .home {
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
-  color: #ffffff;
+  background: linear-gradient(135deg, #1d6391, #130000);
+  color: #f3ecda;
 }
 
 .about {
-  background: #f8fafc;
+  background: #f3ecda;
 }
 
 .trust {
-  background: #ffffff;
+  background: #f3ecda;
 }
 
 .contact {
-  background: #f3f4f6;
+  background: #f3ecda;
 }
