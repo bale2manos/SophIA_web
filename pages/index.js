@@ -14,7 +14,10 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <nav className={styles.navbar}>
-          <a href="#home" className={styles.logo}>SophIA</a>
+          <a href="#home" className={styles.logo}>
+            <img src="/logo.svg" alt="SophIA logo" className={styles.logoImage} />
+            <span>SophIA</span>
+          </a>
           <div className={styles.links}>
             <a href="#home">Home</a>
             <a href="#about">Quiénes somos</a>
