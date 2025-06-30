@@ -75,12 +75,16 @@
   align-items: center;
 }
 
+.trustSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
 /* Carrusel de patrocinadores */
 .carouselWrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 1200px;
 }
 
 .carouselTrack {
@@ -97,7 +101,8 @@
 }
 
 .sponsorLink {
-  flex: 0 0 auto;
+  flex: 0 0 25%;
+  max-width: 25%;
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -110,7 +115,7 @@
 }
 
 .sponsorLogo {
-  height: 60px;
+  height: 80px;
   width: auto;
   display: block;
 }
