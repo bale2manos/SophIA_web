@@ -5,22 +5,22 @@ const sponsors = [
   {
     name: 'UC3M',
     url: 'https://www.uc3m.es',
-    logo: '/logos/uc3m.svg',
+    logo: '/logos/uc3m.jpg',
   },
   {
     name: 'EOI',
     url: 'https://www.eoi.es',
-    logo: '/logos/eoi.svg',
+    logo: '/logos/eoi.jpg',
   },
   {
     name: 'Santander X',
     url: 'https://www.santanderx.com',
-    logo: '/logos/santanderx.svg',
+    logo: '/logos/santander_x.jpg',
   },
   {
     name: 'FECOMA',
-    url: 'https://fecoma.info',
-    logo: '/logos/fecoma.svg',
+    url: 'https://fecoma.coop/',
+    logo: '/logos/fecoma.jpg',
   },
 ];
 
@@ -35,8 +35,8 @@ export default function TrustSection() {
   };
 
   return (
-    <section id="trust" className={`${styles.section} ${styles.trust}`}>
-      <h1>Confían en nosotros</h1>
+    <section id="trust" className={styles.trustSection}>
+    <h1 className={styles.title}>Confían en nosotros</h1>
       <div className={styles.carouselWrapper}>
         <button
           className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
@@ -71,5 +71,6 @@ export default function TrustSection() {
         </button>
       </div>
     </section>
+
   );
 }
