@@ -67,3 +67,60 @@
 .contact {
   background: #f3ecda;
 }
+
+.carouselWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 24px;
+  padding: 32px 48px;
+  scroll-behavior: smooth;
+}
+
+.sponsorLink {
+  flex: 0 0 auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sponsorLink:hover {
+  transform: scale(1.1);
+}
+
+.sponsorLogo {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.carouselButtonLeft {
+  left: 8px;
+}
+
+.carouselButtonRight {
+  right: 8px;
+}

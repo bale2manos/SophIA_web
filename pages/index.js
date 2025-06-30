@@ -1,5 +1,9 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import HomeSection from '../components/sections/HomeSection';
+import AboutSection from '../components/sections/AboutSection';
+import TrustSection from '../components/sections/TrustSection';
+import ContactSection from '../components/sections/ContactSection';
 
 export default function Home() {
   return (
@@ -18,18 +22,10 @@ export default function Home() {
             <a href="#contact">Contacta</a>
           </div>
         </nav>
-        <section id="home" className={`${styles.section} ${styles.home}`}>
-          <h1>Home</h1>
-        </section>
-        <section id="about" className={`${styles.section} ${styles.about}`}>
-          <h1>Quiénes somos</h1>
-        </section>
-        <section id="trust" className={`${styles.section} ${styles.trust}`}>
-          <h1>Confían en nosotros</h1>
-        </section>
-        <section id="contact" className={`${styles.section} ${styles.contact}`}>
-          <h1>Contacta</h1>
-        </section>
+        <HomeSection />
+        <AboutSection />
+        <TrustSection />
+        <ContactSection />
       </div>
     </>
   );
