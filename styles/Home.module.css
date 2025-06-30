@@ -67,3 +67,29 @@
 .contact {
   background: #f3ecda;
 }
+
+.trustLogos {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 32px;
+}
+
+.trustLogos a {
+  flex: 0 0 auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.trustLogos a:hover {
+  transform: scale(1.1);
+}
+
+.trustLogoImg {
+  height: 60px;
+  width: auto;
+  display: block;
+}
