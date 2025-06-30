@@ -59,8 +59,11 @@
 }
 
 .about,
-.trust,
 .contact {
+  background: #faf6e8;
+}
+
+.trust {
   background: #f3ecda;
 }
 
@@ -80,34 +83,24 @@
   margin-bottom: 2rem;
 }
 
-/* Carrusel de patrocinadores */
-.carouselWrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.carouselTrack {
-  display: flex;
+/* Patrocinadores */
+.sponsorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
+  width: 100%;
   padding: 1rem 3rem;
-  scroll-behavior: smooth;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.carouselTrack::-webkit-scrollbar {
-  display: none;
 }
 
 .sponsorLink {
-  flex: 0 0 25%;
-  max-width: 25%;
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 16px;
   transition: transform 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sponsorLink:hover {
@@ -120,27 +113,3 @@
   display: block;
 }
 
-.carouselButton {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-.carouselButtonLeft {
-  left: 8px;
-}
-
-.carouselButtonRight {
-  right: 8px;
-}
