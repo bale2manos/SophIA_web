@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import HomeSection from '../components/sections/HomeSection';
+import ProductsSection from '../components/sections/ProductsSection';
 import AboutSection from '../components/sections/AboutSection';
 import TrustSection from '../components/sections/TrustSection';
 import ContactSection from '../components/sections/ContactSection';
@@ -26,6 +27,7 @@ export default function Home() {
           </div>
         </nav>
         <HomeSection />
+        <ProductsSection />
         <AboutSection />
         <TrustSection />
         <ContactSection />
