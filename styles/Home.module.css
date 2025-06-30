@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   height: 64px;
-  background: rgba(243, 236, 218, 0.8);
+  background:  rgba(229, 216, 182, 0.8);
   backdrop-filter: blur(8px);
   display: flex;
   justify-content: space-between;
@@ -34,8 +34,8 @@
 }
 
 .logoImage {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
 }
 
 .links a {
@@ -63,27 +63,112 @@
 
 /* Secciones específicas */
 .home {
-  background: linear-gradient(135deg, #1d6391, #130000);
-  color: #f3ecda;
+  position: relative;
+  background: #f3ecda;
+  color: #130000;
+  overflow: hidden;
 }
 
 .homeContent {
+  position: relative;
+  padding: 2rem 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+}
+
+.homeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.leftColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+}
+
+.rightColumn {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2rem 1rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .heroLogo {
   width: 120px;
   height: auto;
   margin-bottom: 1.5rem;
+  align-self: center;
 }
 
 .tagline {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: 2.3rem;
+  font-weight: 600;
   margin-bottom: 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-self: center;
+}
+
+.logoText {
+  font-size: 5rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  color: #130000;
+  font-family: 'Gambarino', serif;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
+
+.ctaButton {
+  background-color: #1d6391;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  align-self: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+  background-color: #154a6d;
+}
+
+
+
+.tagline {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: 'Gambarino', serif;
 }
 
@@ -103,6 +188,8 @@
 .about {
   font-size: 1rem;
   padding: 4rem 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .about h1 {
@@ -117,15 +204,6 @@
   margin-top: 2rem;
   width: 100%;
   max-width: 900px;
-}
-
-.founderCard {
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  text-align: center;
-  font-size: 1rem;
 }
 
 .founderCard h3 {
@@ -148,6 +226,8 @@
 
 /* Trust Section */
 .trustSection {
+  position: relative;
+  z-index: 1; 
   width: 100%;
   background: #f3ecda;
   padding: 4rem 1rem;
@@ -231,6 +311,8 @@
   flex: 1;
   min-width: 300px;
   max-width: 500px;
+    position: relative;
+  z-index: 2;
 }
 
 .founderCard {
@@ -240,7 +322,19 @@
   text-align: center;
   margin-bottom: 2rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    position: relative;
+  z-index: 3;
 }
+
+.founderCard a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.founderCard a:hover {
+  transform: scale(1.05);
+}
+
 
 .founderImage {
   width: 100px;
@@ -311,6 +405,7 @@
 .textContainer ul {
   padding-left: 1.2rem;
   margin: 1rem 0;
+  list-style-type: none;
 }
 
 .textContainer li {
