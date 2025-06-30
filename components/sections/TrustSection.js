@@ -36,7 +36,7 @@ export default function TrustSection() {
 
   return (
     <section id="trust" className={styles.trustSection}>
-    <h1 className={styles.title}>Confían en nosotros</h1>
+      <h1>Confían en nosotros</h1>
       <div className={styles.carouselWrapper}>
         <button
           className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
