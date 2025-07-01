@@ -26,11 +26,11 @@ export default function AboutSection() {
               >
                 <img
                   src="/img/guillermo.jpeg"
-                  alt="Guillermo Fernández Rodríguez"
+                  alt="Guillermo Fernández"
                   className={styles.founderImage}
                 />
               </a>
-              <h3>Guillermo Fernández Rodríguez</h3>
+              <h3>Guillermo Fernández</h3>
               <p>
                 Estudiante de Ingeniería Industrial en la UC3M. Ha estudiado en UC Berkeley y trabajado en McKinsey & Company y The Startup CFO. Apasionado por el impacto tecnológico con enfoque estructurado.
               </p>
@@ -44,11 +44,11 @@ export default function AboutSection() {
               >
                 <img
                   src="/img/samuel.jpeg"
-                  alt="Samuel García Durá"
+                  alt="Samuel García"
                   className={styles.founderImage}
                 />
               </a>
-              <h3>Samuel García Durá</h3>
+              <h3>Samuel García</h3>
               <p>
                 Estudiante de Derecho y Estudios Internacionales en la UC3M. Durante su estancia en Berkeley, trabajó en el Senado de California. Aporta una visión estratégica e institucional al proyecto.
               </p>
@@ -61,16 +61,14 @@ export default function AboutSection() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/img/juan.png"
+                  src="/img/juan.jpeg"
                   alt="Juan Leal"
                   className={styles.founderImage}
                 />
               </a>
               <h3>Juan Leal</h3>
               <p>
-                Estudiante de Ingeniería Informática en la UC3M. Apasionado por la innovación y la integración de la IA en la educación.
-              </p>
-            </div>
+              Estudiante del Máster en Inteligencia Artificial en la UC3M, Juan es también desarrollador de software enfocado en IA dentro de SophIA y colaboró con Ferrovial Construction como AI Software Developer .</p>            </div>
 
             <div className={styles.founderCard}>
               <a
@@ -79,14 +77,14 @@ export default function AboutSection() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/img/javier.png"
+                  src="/img/javier.jpeg"
                   alt="Javier Pallarés"
                   className={styles.founderImage}
                 />
               </a>
               <h3>Javier Pallarés</h3>
               <p>
-                Estudiante de Economía en la UC3M con experiencia en gestión de proyectos y estrategias de innovación educativa.
+                Estudiante de Ingeniería Informática en la UC3M y trabajó en Deloitte en el área de Cyber T&T. Además, fue galardonado con el Premio a la Excelencia 2024 del Consejo Social de la UC3M.
               </p>
             </div>
           </div>

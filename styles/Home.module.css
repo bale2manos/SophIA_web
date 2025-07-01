@@ -223,12 +223,19 @@
 
 .founderGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* Fuerza siempre 2 columnas */
   gap: 1.5rem;
   margin-top: 2rem;
   width: 100%;
   max-width: 900px;
 }
+
+@media (max-width: 768px) {
+  .founderGrid {
+    grid-template-columns: 1fr; /* Solo una columna en móvil */
+  }
+}
+
 
 .founderCard h3 {
   margin-top: 0;
@@ -332,7 +339,6 @@
   justify-content: center;
   gap: 4rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
 }
 
 .aboutLeft, .aboutRight {
@@ -341,6 +347,10 @@
   max-width: 500px;
     position: relative;
   z-index: 2;
+}
+
+.aboutRight {
+  margin-top: 2vh;
 }
 
 .founderCard {
