@@ -1,8 +1,16 @@
+import { motion } from 'framer-motion';
 import styles from "../../styles/Home.module.css";
 
 export default function AboutSection() {
   return (
-    <section id="about" className={`${styles.section} ${styles.about}`}>
+    <motion.section
+      id="about"
+      className={`${styles.section} ${styles.about}`}
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <h1>Quiénes somos</h1>
 
       <div className={styles.aboutContent}>
@@ -73,6 +81,6 @@ export default function AboutSection() {
 
 
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import styles from '../../styles/Home.module.css';
 
 export default function ContactSection() {
@@ -10,7 +11,14 @@ export default function ContactSection() {
   }, []);
 
   return (
-    <section id="contact" className={`${styles.section} ${styles.contact}`}>
+    <motion.section
+      id="contact"
+      className={`${styles.section} ${styles.contact}`}
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <h1>Contacta</h1>
       <p className={styles.contactDescription}>
         Solicita una demo personalizada y agéndala directamente con nuestro equipo.
@@ -44,6 +52,6 @@ export default function ContactSection() {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
