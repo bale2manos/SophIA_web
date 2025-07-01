@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import FadeInWhenVisible from '../FadeInWhenVisible';
 import styles from '../../styles/Home.module.css';
 
 const sponsors = [
@@ -35,7 +36,7 @@ export default function TrustSection() {
       transition={{ duration: 0.6 }}
     >
       <h1>Confían en nosotros</h1>
-      <div className={styles.sponsorGrid}>
+      <FadeInWhenVisible className={styles.sponsorGrid}>
         {sponsors.map((sponsor) => (
           <a
             key={sponsor.name}
@@ -51,7 +52,7 @@ export default function TrustSection() {
             />
           </a>
         ))}
-      </div>
+      </FadeInWhenVisible>
     </motion.section>
   );
 }

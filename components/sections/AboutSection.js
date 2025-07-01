@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import FadeInWhenVisible from '../FadeInWhenVisible';
 import styles from "../../styles/Home.module.css";
 
 export default function AboutSection() {
@@ -13,7 +14,7 @@ export default function AboutSection() {
     >
       <h1>Quiénes somos</h1>
 
-      <div className={styles.aboutContent}>
+      <FadeInWhenVisible className={styles.aboutContent}>
         {/* Columna izquierda: fundadores */}
         <div className={styles.aboutLeft}>
           <div className={styles.founderCard}>
@@ -80,7 +81,7 @@ export default function AboutSection() {
         </div>
 
 
-      </div>
-    </motion.section>
+        </FadeInWhenVisible>
+      </motion.section>
   );
 }
