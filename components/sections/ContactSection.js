@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import FadeInWhenVisible from '../FadeInWhenVisible';
 import styles from '../../styles/Home.module.css';
 
 export default function ContactSection() {
@@ -24,7 +25,7 @@ export default function ContactSection() {
         Solicita una demo personalizada y agéndala directamente con nuestro equipo.
       </p>
 
-      <div className={styles.contactContainer}>
+      <FadeInWhenVisible className={styles.contactContainer}>
         {/* Widget Calendly */}
         <div className={styles.calendlyContainer}>
           <div
@@ -51,7 +52,7 @@ export default function ContactSection() {
             Tanto si eres docente como si representas a una institución, estaremos encantados de mostrarte cómo SophIA puede marcar la diferencia en tu día a día.
           </p>
         </div>
-      </div>
+      </FadeInWhenVisible>
     </motion.section>
   );
 }

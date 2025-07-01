@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import FadeInWhenVisible from '../FadeInWhenVisible';
 import styles from '../../styles/Home.module.css';
 import FloatingProductDetail from '../FloatingProductDetail';
 
@@ -48,7 +49,7 @@ export default function ProductsSection() {
       <h2 className={styles.productsTitle}>
         Potencia tu aula con inteligencia artificial
       </h2>
-      <div className={styles.productGrid}>
+      <FadeInWhenVisible className={styles.productGrid}>
         {products.map((p) => (
           <div
             key={p.id}
@@ -66,7 +67,7 @@ export default function ProductsSection() {
             </button>
           </div>
         ))}
-      </div>
+      </FadeInWhenVisible>
     </motion.section>
   );
 }

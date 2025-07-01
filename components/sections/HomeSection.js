@@ -2,7 +2,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import Particles from '@tsparticles/react';
 import { loadSlim } from 'tsparticles-slim';
-import { motion } from 'framer-motion';
+import FadeInWhenVisible from '../FadeInWhenVisible';
 import styles from '../../styles/Home.module.css';
 
 export default function HomeSection() {
@@ -51,13 +51,7 @@ export default function HomeSection() {
         />
       )}
 
-      <motion.div
-        className={styles.homeContainer}
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        style={{ position: 'relative', zIndex: 1 }}
-      >
+      <FadeInWhenVisible className={styles.homeContainer} style={{ position: 'relative', zIndex: 1 }}>
         <div className={styles.leftColumn}>
           <img src="/img/home.png" alt="Ilustración SophIA" className={styles.heroImage} />
         </div>
@@ -78,7 +72,7 @@ export default function HomeSection() {
             Solicita una demo
           </button>
         </div>
-      </motion.div>
+      </FadeInWhenVisible>
     </section>
   );
 }
