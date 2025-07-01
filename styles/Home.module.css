@@ -39,6 +39,7 @@
 }
 
 .links a {
+  position: relative;
   margin-left: 24px;
   text-decoration: none;
   color: #000000;
@@ -46,8 +47,30 @@
   transition: color 0.2s ease-in-out;
 }
 
+.links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: #1d6391;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
 .links a:hover {
   color: #130000;
+}
+
+.links a:hover::after,
+.links a:global(.active)::after {
+  transform: scaleX(1);
+}
+
+.links a:global(.active) {
+  color: #1d6391;
 }
 
 .section {
@@ -471,6 +494,11 @@
   padding: 1rem;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productCard:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
 
 .productCard::before {

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styles from '../../styles/Home.module.css';
 
 const sponsors = [
@@ -25,7 +26,14 @@ const sponsors = [
 
 export default function TrustSection() {
   return (
-    <section id="trust" className={styles.trustSection}>
+    <motion.section
+      id="trust"
+      className={styles.trustSection}
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <h1>Confían en nosotros</h1>
       <div className={styles.sponsorGrid}>
         {sponsors.map((sponsor) => (
@@ -44,6 +52,6 @@ export default function TrustSection() {
           </a>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import styles from '../../styles/Home.module.css';
 import FloatingProductDetail from '../FloatingProductDetail';
 
@@ -33,7 +34,14 @@ export default function ProductsSection() {
   const [active, setActive] = useState(null);
 
   return (
-    <section id="products" className={`${styles.section} ${styles.products}`}>
+    <motion.section
+      id="products"
+      className={`${styles.section} ${styles.products}`}
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       {active && (
         <FloatingProductDetail product={active} onClose={() => setActive(null)} />
       )}
@@ -59,6 +67,6 @@ export default function ProductsSection() {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

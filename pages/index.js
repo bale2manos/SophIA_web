@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
 import HomeSection from '../components/sections/HomeSection';
 import ProductsSection from '../components/sections/ProductsSection';
@@ -7,6 +8,24 @@ import TrustSection from '../components/sections/TrustSection';
 import ContactSection from '../components/sections/ContactSection';
 
 export default function Home() {
+  const [active, setActive] = useState('home');
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+    sections.forEach((sec) => observer.observe(sec));
+    return () => sections.forEach((sec) => observer.unobserve(sec));
+  }, []);
+
   return (
     <>
       <Head>
@@ -20,10 +39,10 @@ export default function Home() {
             <span>SophIA</span>
           </a>
           <div className={styles.links}>
-            <a href="#home">Home</a>
-            <a href="#about">Quiénes somos</a>
-            <a href="#trust">Confían en nosotros</a>
-            <a href="#contact">Contacta</a>
+            <a href="#home" className={active === 'home' ? 'active' : ''}>Home</a>
+            <a href="#about" className={active === 'about' ? 'active' : ''}>Quiénes somos</a>
+            <a href="#trust" className={active === 'trust' ? 'active' : ''}>Confían en nosotros</a>
+            <a href="#contact" className={active === 'contact' ? 'active' : ''}>Contacta</a>
           </div>
         </nav>
         <HomeSection />
