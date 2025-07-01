@@ -17,40 +17,78 @@ export default function AboutSection() {
       <FadeInWhenVisible className={styles.aboutContent}>
         {/* Columna izquierda: fundadores */}
         <div className={styles.aboutLeft}>
-          <div className={styles.founderCard}>
-            <a
-              href="https://www.linkedin.com/in/guillermo-fer/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/img/guillermo.jpeg"
-                alt="Guillermo Fernández Rodríguez"
-                className={styles.founderImage}
-              />
-            </a>
-            <h3>Guillermo Fernández Rodríguez</h3>
-            <p>
-              Estudiante de Ingeniería Industrial en la UC3M. Ha estudiado en UC Berkeley y trabajado en McKinsey & Company y The Startup CFO. Apasionado por el impacto tecnológico con enfoque estructurado.
-            </p>
-          </div>
+          <div className={styles.founderGrid}>
+            <div className={styles.founderCard}>
+              <a
+                href="https://www.linkedin.com/in/guillermo-fer/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/img/guillermo.jpeg"
+                  alt="Guillermo Fernández Rodríguez"
+                  className={styles.founderImage}
+                />
+              </a>
+              <h3>Guillermo Fernández Rodríguez</h3>
+              <p>
+                Estudiante de Ingeniería Industrial en la UC3M. Ha estudiado en UC Berkeley y trabajado en McKinsey & Company y The Startup CFO. Apasionado por el impacto tecnológico con enfoque estructurado.
+              </p>
+            </div>
 
-          <div className={styles.founderCard}>
-            <a
-              href="https://www.linkedin.com/in/samuel-garcia-dura-6aaa00226/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/img/samuel.jpeg"
-                alt="Samuel García Durá"
-                className={styles.founderImage}
-              />
-            </a>
-            <h3>Samuel García Durá</h3>
-            <p>
-              Estudiante de Derecho y Estudios Internacionales en la UC3M. Durante su estancia en Berkeley, trabajó en el Senado de California. Aporta una visión estratégica e institucional al proyecto.
-            </p>
+            <div className={styles.founderCard}>
+              <a
+                href="https://www.linkedin.com/in/samuel-garcia-dura-6aaa00226/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/img/samuel.jpeg"
+                  alt="Samuel García Durá"
+                  className={styles.founderImage}
+                />
+              </a>
+              <h3>Samuel García Durá</h3>
+              <p>
+                Estudiante de Derecho y Estudios Internacionales en la UC3M. Durante su estancia en Berkeley, trabajó en el Senado de California. Aporta una visión estratégica e institucional al proyecto.
+              </p>
+            </div>
+
+            <div className={styles.founderCard}>
+              <a
+                href="https://www.linkedin.com/in/juan-leal-aliaga/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/img/juan.png"
+                  alt="Juan Leal"
+                  className={styles.founderImage}
+                />
+              </a>
+              <h3>Juan Leal</h3>
+              <p>
+                Estudiante de Ingeniería Informática en la UC3M. Apasionado por la innovación y la integración de la IA en la educación.
+              </p>
+            </div>
+
+            <div className={styles.founderCard}>
+              <a
+                href="https://www.linkedin.com/in/javier-pallares-de-bonrostro/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/img/javier.png"
+                  alt="Javier Pallarés"
+                  className={styles.founderImage}
+                />
+              </a>
+              <h3>Javier Pallarés</h3>
+              <p>
+                Estudiante de Economía en la UC3M con experiencia en gestión de proyectos y estrategias de innovación educativa.
+              </p>
+            </div>
           </div>
         </div>
 
